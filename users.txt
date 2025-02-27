@@ -1,1 +1,6 @@
-Alan,Turing,aturing@w3c.com,58,aturing96a6d801Alan,Turing,aturing@w3c.com,58,aturing26ae2eeeJohannes,Tamayo,jztamayo@up.edu.ph,58,jtamayoaff90126Miku,Hatsune,hmiku@vocaloid.net,58,mhatsuneedece8cc
+Alan,Turing,aturing@w3c.com,58,aturing4b7f0080
+Johannes,Tamayo,jztamayo@up.edu.ph,58,jtamayo98479e13
+Lu8kla,Megurine,gmekfd@vocaloid.net,18,lmegurine94af10f6
+Alan,Turing,aturing@w3c.com,58,aturingf6158074
+Johannes,Tamayo,jztamayo@up.edu.ph,58,jtamayo1856a68e
+Lu8kla,Megurine,gmekfd@vocaloid.net,18,lmegurine8055d3e3

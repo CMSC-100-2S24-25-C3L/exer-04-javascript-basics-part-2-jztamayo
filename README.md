@@ -10,14 +10,20 @@ Github Repo Link:
 > https://github.com/CMSC-100-2S24-25-C3L/exer-04-javascript-basics-part-2-jztamayo 
 
 Key Takeaways from the Exercise:
-> learning how to import nodes/modules
+> how to import and export from different javascript packages
 
-> learning more syntax and methods for javascript
+> how to use methods from different imported packages
 
-> 
+> more syntax and methods for javascript
 
 References: 
 
 > CMSC100 Lab Guide Week 4
 
 > CMSC100 Exer 4 Handout
+
+> https://www.npmjs.com/package/validator#no-es6
+
+> https://www.npmjs.com/package/uuid
+
+> https://nodejs.org/api/fs.html#fsappendfilesyncpath-data-options

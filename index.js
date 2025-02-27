@@ -2,11 +2,11 @@
 // CMSC100 C3L 2018-68611
 
 // import statements
-import appendFileSync from 'fs';
+import { appendFileSync } from 'node:fs';
 import validator from 'validator';
 import { v4 as uuidv4 } from 'uuid';
 
-function generateUniqueID(fname, lname) {
+export function generateUniqueID(fname, lname) {
     // empty string
     let uniqueId = "";
     // console.log(uniqueId);
@@ -29,24 +29,33 @@ function generateUniqueID(fname, lname) {
     return uniqueId;
 }
 
-function addAccount([fname, lname, email, age]) {
+export function addAccount([fname, lname, email, age]) {
 
     if (!fname) {
         return false;
     } else if (!lname) {
         return false;
-    } else if (!email) {
+    } else if (!(validator.isEmail(email))) {
         return false;
     } else if (age < 18) {
         return false;
     } else {
+        // call id generator
+        let uniqueId = generateUniqueID(fname, lname);
+
         // save data into new line of file
+        let exportData = "";
+        exportData = exportData + fname + ',' + lname + ',' + email + ',' + age + ',' + uniqueId;
+        try {
+            appendFileSync('users.txt', exportData);
+            console.log('The "data to append" was appended to file!');
+        } catch (err) {
+            // error catch
+            console.log("error could not save");
+        }
     }
 
 }
 
-generateUniqueID("Alan", "Turing");
-addAccount(["Alan", "Turing", "aturing@w3c.com", 58]);
 
-
-
+// addAccount(["Alan", "Turing", "aturing@w3c.com", 58]);

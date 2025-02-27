@@ -6,6 +6,7 @@ import { appendFileSync } from 'node:fs';
 import validator from 'validator';
 import { v4 as uuidv4 } from 'uuid';
 
+// generates a unique ID based on the first and last name
 export function generateUniqueID(fname, lname) {
     // empty string
     let uniqueId = "";
@@ -30,14 +31,18 @@ export function generateUniqueID(fname, lname) {
 }
 
 export function addAccount([fname, lname, email, age]) {
-
+    // string 
     if (!fname) {
+        console.log("Error: no first name");
         return false;
     } else if (!lname) {
+        console.log("Error: no last name");
         return false;
     } else if (!(validator.isEmail(email))) {
+        console.log("Error: invalid or no email");
         return false;
     } else if (age < 18) {
+        console.log("Error: not of legal age");
         return false;
     } else {
         // call id generator
@@ -45,13 +50,13 @@ export function addAccount([fname, lname, email, age]) {
 
         // save data into new line of file
         let exportData = "";
-        exportData = exportData + fname + ',' + lname + ',' + email + ',' + age + ',' + uniqueId;
+        exportData = exportData + fname + ',' + lname + ',' + email + ',' + age + ',' + uniqueId + "\n";
         try {
             appendFileSync('users.txt', exportData);
-            console.log('The "data to append" was appended to file!');
+            console.log('Success! Data has been exported');
         } catch (err) {
             // error catch
-            console.log("error could not save");
+            console.log("Error: could not save to file");
         }
     }
 

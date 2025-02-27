@@ -1,0 +1,12 @@
+{
+  "name": "exer-04-javascript-basics-part-2-jztamayo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CMSC100 C4L JS Exer part 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johannes Nikolai Tamayo",
+  "license": "ISC"
+}
